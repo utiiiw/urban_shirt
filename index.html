@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urban Shirt</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<!-- BUBBLE GLOBAL -->
+<div id="bubble-area">
+  <span class="bubble"></span>
+  <span class="bubble"></span>
+  <span class="bubble"></span>
+  <span class="bubble"></span>
+  <span class="bubble"></span>
+  <span class="bubble"></span>
+  <span class="bubble"></span>
+  <span class="bubble"></span>
+  <span class="bubble"></span>
+  <span class="bubble"></span>
+</div> 
+
+<!-- JS BUBBLE -->
+<div class="bubble-container"></div>
+
+<!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">Urban Shirt</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="katalog.html">Katalog</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="testimoni.html" class="active">Testimoni</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- HERO SECTION -->
+<header class="hero" style="height: 300px !important; background-color: yellow;"> 
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+        <h1>Urban Shirt</h1>
+        <p>Urban Style, Everyday Vibes.</p>
+    </div>
+</header>
+
+<section class="intro">
+    <h2>Manjakan Diri dengan Pakaian Kami</h2>
+</section>
+
+<section class="product-preview">
+    <div class="product-item tilt">
+        <img src="katalog/kemeja30.jpg" alt="Kemeja Pria" />
+        <p class="label">Kemeja Pria</p>
+    </div>
+
+    <div class="product-item tilt">
+        <img src="katalog/kemeja20.jpg" alt="Kemeja Wanita" />
+        <p class="label">Kemeja Wanita</p>
+    </div>
+</section>
+
+<section class="description">
+    <p>
+        Di Urban Shirt, kami ingin membuat Anda tampil percaya diri dan stylish di
+        setiap kesempatan. Kami menghadirkan koleksi kemeja dengan desain modern,
+        bahan berkualitas, dan kenyamanan maksimal untuk semua pelanggan kami.
+    </p>
+    <p>
+        Spesialisasi kami adalah kemeja kasual hingga formal yang cocok dipakai ke
+        kampus, kantor, atau sekadar hangout santai.
+    </p>
+    <p>
+        Kami percaya bahwa gaya adalah cara Anda mengekspresikan diri. Karena itu,
+        kami menawarkan berbagai pilihan warna, motif, dan potongan kemeja.
+    </p>
+</section>
+
+<footer>
+    <p>Made with Love by utii | © 2025 Urban Shirt. All rights reserved.</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        document.getElementById("nav-menu").classList.toggle("active");
+    }
+
+    // BUBBLE JS
+    const bubbleContainer = document.querySelector(".bubble-container");
+
+    function createBubble() {
+        const bubble = document.createElement("span");
+        bubble.classList.add("bubble");
+
+        const size = Math.random() * 40 + 10;
+        bubble.style.width = size + "px";
+        bubble.style.height = size + "px";
+        bubble.style.left = Math.random() * window.innerWidth + "px";
+
+        bubbleContainer.appendChild(bubble);
+
+        setTimeout(() => {
+            bubble.remove();
+        }, 6000);
+    }
+
+    setInterval(createBubble, 300);
+
+    // TILT
+    document.querySelectorAll(".tilt").forEach((card) => {
+        card.addEventListener("mousemove", (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = (y - centerY) / 15;
+            const rotateY = (centerX - x) / 15;
+
+            card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+        });
+
+        card.addEventListener("mouseleave", () => {
+            card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+        });
+    });
+</script>
+
+</body>
+</html>
