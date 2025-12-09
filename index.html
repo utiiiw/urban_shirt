@@ -103,25 +103,47 @@
         <!-- (isi produk sama persis seperti katalog.html tadi) -->
 
         <div class="product-item">
-            <img src="katalog/kemeja1.jpg" alt="Kemeja 1" />
-            <h3>Kemeja Batik</h3>
-            <p class="price">Rp100.000</p>
-            <button class="btn">Tambah ke Keranjang</button>
-        </div>
+    <img src="katalog/kemeja1.jpg" alt="Kemeja 1" />
+    <h3>Kemeja Batik</h3>
+    <p class="price">Rp100.000</p>
+    <button 
+        class="btn add-to-cart" 
+        data-id="1" 
+        data-name="Kemeja Batik" 
+        data-price="100000"
+    >
+        Tambah ke Keranjang
+    </button>
+</div>
 
-        <div class="product-item">
-            <img src="katalog/kemeja2.jpg" alt="Kemeja 2" />
-            <h3>Kemeja Bowling</h3>
-            <p class="price">Rp140.000</p>
-            <button class="btn">Tambah ke Keranjang</button>
-        </div>
+<div class="product-item">
+    <img src="katalog/kemeja2.jpg" alt="Kemeja 2" />
+    <h3>Kemeja Bowling</h3>
+    <p class="price">Rp140.000</p>
+    <button 
+        class="btn add-to-cart" 
+        data-id="2" 
+        data-name="Kemeja Bowling" 
+        data-price="140000"
+    >
+        Tambah ke Keranjang
+    </button>
+</div>
 
-        <div class="product-item">
-            <img src="katalog/kemeja3.jpg" alt="Kemeja 3" />
-            <h3>Kemeja Chambray</h3>
-            <p class="price">Rp135.000</p>
-            <button class="btn">Tambah ke Keranjang</button>
-        </div>
+<div class="product-item">
+    <img src="katalog/kemeja3.jpg" alt="Kemeja 3" />
+    <h3>Kemeja Chambray</h3>
+    <p class="price">Rp135.000</p>
+    <button 
+        class="btn add-to-cart" 
+        data-id="3" 
+        data-name="Kemeja Chambray" 
+        data-price="135000"
+    >
+        Tambah ke Keranjang
+    </button>
+</div>
+
 
         <!-- dan seluruh LIST produk lainnya… (TIDAK aku potong/ubah) -->
         <!-- Kamu tinggal paste ulang seluruh daftar produkmu di sini -->
@@ -230,8 +252,24 @@
     <p>Made with Love by utii | © 2025 Urban Shirt. All rights reserved.</p>
 </footer>
 
-
 <script src="js/Urban-shirt-appjs.js"></script>
 
+    <!-- MODAL KERANJANG -->
+<div id="cartModal" class="cart-modal">
+    <div class="cart-content">
+        <span class="close-btn">&times;</span>
+        <h2>Keranjang Belanja</h2>
+        <ul id="cartItems"></ul>
+        <p class="total">Total: <span id="cartTotal">0</span></p>
+    </div>
+</div>
+
+<!-- TOMBOL LIHAT KERANJANG -->
+<button id="viewCartBtn" class="cart-btn">
+    🛒 <span id="cartCount">0</span>
+</button>
+
+    
 </body>
 </html>
+
