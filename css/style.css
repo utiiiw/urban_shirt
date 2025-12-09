@@ -21,7 +21,7 @@ body {
 }
 
 /* ========================================================
-   NAVBAR — FINAL CLEAN VERSION (NO HAMBURGER)
+   NAVBAR (BERSIH - TANPA CART ICON)
 ======================================================== */
 .navbar {
   position: fixed;
@@ -38,7 +38,6 @@ body {
   backdrop-filter: blur(4px);
 }
 
-/* Logo */
 .navbar .logo {
   font-size: 22px;
   font-weight: 700;
@@ -46,14 +45,12 @@ body {
   letter-spacing: 0.2px;
 }
 
-/* Desktop Menu */
 .navbar nav ul {
   display: flex;
   list-style: none;
   gap: 22px;
 }
 
-/* Link style */
 .navbar nav ul li a {
   text-decoration: none;
   padding: 8px 14px;
@@ -69,28 +66,6 @@ body {
 .navbar nav ul li a.active {
   background: #7a1b41;
   color: #ffffff;
-}
-
-/* ========================================================
-   CART ICON IN NAVBAR (BARU DITAMBAH)
-======================================================== */
-.nav-cart {
-  position: relative;
-  font-size: 28px;
-  cursor: pointer;
-  color: #7a1b41;
-}
-
-.nav-cart span {
-  position: absolute;
-  top: -10px;
-  right: -16px;
-  background: #7a1b41;
-  color: white;
-  font-size: 12px;
-  padding: 3px 7px;
-  border-radius: 50%;
-  font-weight: 700;
 }
 
 /* ========================================================
@@ -112,12 +87,7 @@ body {
 }
 
 /* ========================================================
-   PRODUCT, KATALOG, TESTIMONI, KONTAK, FOOTER, BUBBLES
-======================================================== */
-/* (ISI CSS KAMU TETAP SAMA — TIDAK DIUBAH) */
-
-/* ========================================================
-   MODAL KERANJANG (BARU)
+   MODAL KERANJANG
 ======================================================== */
 .cart-modal {
   display: none;
@@ -153,7 +123,7 @@ body {
   cursor: pointer;
 }
 
-/* TOMBOL KERANJANG DI BAWAH (TETAP ADA) */
+/* Tombol keranjang pojok kanan bawah */
 .cart-btn {
   position: fixed;
   right: 25px;
@@ -166,4 +136,59 @@ body {
   cursor: pointer;
   border: none;
   z-index: 5000;
+}
+
+/* ========================================================
+   PRODUCT ORIGINAL (TIDAK DIUBAH)
+======================================================== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  padding: 20px;
+}
+
+.product-item {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px solid #7a1b41;
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.product-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #7a1b41;
+}
+
+.product-item h3 {
+  margin-top: 10px;
+  color: #7a1b41;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.product-item .price {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.product-item .btn {
+  padding: 10px 16px;
+  background: #7a1b41;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.product-item .btn:hover {
+  background: #5a1330;
 }
