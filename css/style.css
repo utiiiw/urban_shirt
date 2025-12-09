@@ -36,7 +36,7 @@ body {
 .center { text-align: center; }
 
 /* ========================================================
-   NAVBAR — FIX FINAL
+   NAVBAR — FINAL CLEAN VERSION (NO HAMBURGER)
 ======================================================== */
 .navbar {
   position: fixed;
@@ -49,25 +49,28 @@ body {
   align-items: center;
   background: #ffffff;
   border-bottom: 1px solid rgba(122, 27, 65, 0.08);
-  z-index: 5000 !important; /* FIX NAIKKKAN */
+  z-index: 5000 !important;
   backdrop-filter: blur(4px);
 }
 
-.navbar .logo,
-.navbar .nav-brand {
+/* Logo */
+.navbar .logo {
   font-size: 22px;
   font-weight: 700;
   color: #7a1b41;
   letter-spacing: 0.2px;
 }
 
+/* Desktop Menu */
 .navbar nav ul {
   display: flex;
   list-style: none;
   gap: 22px;
+  margin: 0;
+  padding: 0;
 }
 
-/* ⭐ BORDER DESKTOP */
+/* Link style */
 .navbar nav ul li a {
   text-decoration: none;
   padding: 8px 14px;
@@ -85,52 +88,44 @@ body {
   color: #ffffff;
 }
 
-/* Mobile Menu */
+/* ========================================================
+   MOBILE VERSION — NO HAMBURGER, AUTO STACK
+======================================================== */
 @media (max-width: 768px) {
+
+  /* Biar tetap rapi */
+  .navbar {
+    padding: 12px 18px;
+  }
+
+  /* Menu berubah jadi vertical list */
   .navbar nav ul {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .nav-menu {
+    flex-direction: column;
+    gap: 12px;
     position: fixed;
     top: 70px;
-    right: -100%;
-    width: 240px;
+    left: 0;
+    width: 100%;
+    padding: 15px 25px;
     background: #ffffff;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 15px;
-    border-left: 1px solid rgba(122,27,65,0.1);
-    border-top: 1px solid rgba(122,27,65,0.1);
-    transition: right 0.28s ease;
-    z-index: 5001 !important;
+    border-top: 1px solid rgba(122, 27, 65, 0.08);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
   }
 
-  .nav-menu.active {
-    right: 0;
-     display: flex;
-  }
-
-   .nav-menu.active ul {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-   }
-
-  .nav-menu li a {
-    padding: 12px 14px;
-    border: 1px solid rgba(122,27,65,0.35);
-    border-radius: 10px;
-    background: rgba(255,230,240,0.45);
-    font-weight: 600;
+  .navbar nav ul li a {
+    border-width: 1.5px;
+    padding: 10px 14px;
   }
 }
 
+/* ========================================================
+   FIX: supaya konten tidak ketutup navbar
+======================================================== */
+#home {
+  padding-top: 100px !important;
+}
+
+   
 /* ========================================================
    HERO
 ======================================================== */
@@ -448,5 +443,6 @@ body {
     z-index: 12 !important;
 
 }
+
 
 
