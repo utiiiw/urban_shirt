@@ -89,11 +89,11 @@ body {
 .hamburger {
    position: relative; 
     z-index: 6000 !important;
-  display: none;
-  cursor: pointer;
-  padding: 5px;
-  border-radius: 5px;
-  transition: transform 0.2s ease;
+  display: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
 }
 
 .hamburger .bar {
@@ -461,4 +461,3 @@ body {
     z-index: 12 !important;
 
 }
-
