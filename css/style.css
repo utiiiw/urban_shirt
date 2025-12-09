@@ -87,6 +87,8 @@ body {
 
 /* Hamburger */
 .hamburger {
+   position: relative; 
+    z-index: 6000 !important;
   display: none;
   cursor: pointer;
   padding: 5px;
@@ -459,3 +461,4 @@ body {
     z-index: 12 !important;
 
 }
+
