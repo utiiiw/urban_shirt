@@ -23,7 +23,7 @@
   <span class="bubble"></span>
 </div> 
 
-<!-- NAVBAR TANPA HAMBURGER -->
+<!-- NAVBAR DENGAN IKON KERANJANG -->
 <header class="navbar">
     <div class="logo">Urban Shirt</div>
     <nav class="nav-menu">
@@ -35,6 +35,11 @@
             <li><a href="#kontak">Kontak</a></li>
         </ul>
     </nav>
+
+    <!-- IKON KERANJANG BARU -->
+    <button id="navCartBtn" class="cart-icon-btn">
+        🛒 <span id="cartCountNav">0</span>
+    </button>
 </header>
 
 <!-- =======================
@@ -99,54 +104,44 @@
 
     <div class="product-grid">
 
-        <!-- PRODUK PRODUK -->
-        <!-- (isi produk sama persis seperti katalog.html tadi) -->
+        <div class="product-item">
+            <img src="katalog/kemeja1.jpg" alt="Kemeja 1" />
+            <h3>Kemeja Batik</h3>
+            <p class="price">Rp100.000</p>
+            <button 
+                class="btn add-to-cart" 
+                data-id="1" 
+                data-name="Kemeja Batik" 
+                data-price="100000">
+                Tambah ke Keranjang
+            </button>
+        </div>
 
         <div class="product-item">
-    <img src="katalog/kemeja1.jpg" alt="Kemeja 1" />
-    <h3>Kemeja Batik</h3>
-    <p class="price">Rp100.000</p>
-    <button 
-        class="btn add-to-cart" 
-        data-id="1" 
-        data-name="Kemeja Batik" 
-        data-price="100000"
-    >
-        Tambah ke Keranjang
-    </button>
-</div>
+            <img src="katalog/kemeja2.jpg" alt="Kemeja 2" />
+            <h3>Kemeja Bowling</h3>
+            <p class="price">Rp140.000</p>
+            <button 
+                class="btn add-to-cart" 
+                data-id="2" 
+                data-name="Kemeja Bowling" 
+                data-price="140000">
+                Tambah ke Keranjang
+            </button>
+        </div>
 
-<div class="product-item">
-    <img src="katalog/kemeja2.jpg" alt="Kemeja 2" />
-    <h3>Kemeja Bowling</h3>
-    <p class="price">Rp140.000</p>
-    <button 
-        class="btn add-to-cart" 
-        data-id="2" 
-        data-name="Kemeja Bowling" 
-        data-price="140000"
-    >
-        Tambah ke Keranjang
-    </button>
-</div>
-
-<div class="product-item">
-    <img src="katalog/kemeja3.jpg" alt="Kemeja 3" />
-    <h3>Kemeja Chambray</h3>
-    <p class="price">Rp135.000</p>
-    <button 
-        class="btn add-to-cart" 
-        data-id="3" 
-        data-name="Kemeja Chambray" 
-        data-price="135000"
-    >
-        Tambah ke Keranjang
-    </button>
-</div>
-
-
-        <!-- dan seluruh LIST produk lainnya… (TIDAK aku potong/ubah) -->
-        <!-- Kamu tinggal paste ulang seluruh daftar produkmu di sini -->
+        <div class="product-item">
+            <img src="katalog/kemeja3.jpg" alt="Kemeja 3" />
+            <h3>Kemeja Chambray</h3>
+            <p class="price">Rp135.000</p>
+            <button 
+                class="btn add-to-cart" 
+                data-id="3" 
+                data-name="Kemeja Chambray" 
+                data-price="135000">
+                Tambah ke Keranjang
+            </button>
+        </div>
 
     </div>
 </section>
@@ -156,7 +151,6 @@
          TENTANG
 ======================== -->
 <section id="tentang" class="about-page container">
-
     <h1>Tentang Urban Shirt</h1>
     <p class="subtitle">Gaya modern untuk setiap hari. Kualitas terbaik untuk semua suasana.</p>
     
@@ -184,7 +178,6 @@
     <div class="about-image-box">
         <img src="katalog/sample2.jpg" alt="Urban Shirt" />
     </div>
-
 </section>
 
 
@@ -223,7 +216,6 @@
          KONTAK
 ======================== -->
 <section id="kontak" class="contact-page container">
-
     <h1>Hubungi Urban Shirt</h1>
     <p class="subtitle">Kami siap membantu kebutuhanmu!</p>
 
@@ -244,7 +236,6 @@
             <button type="submit" class="btn">Kirim</button>
         </form>
     </div>
-
 </section>
 
 
@@ -254,7 +245,7 @@
 
 <script src="js/Urban-shirt-appjs.js"></script>
 
-    <!-- MODAL KERANJANG -->
+<!-- MODAL KERANJANG -->
 <div id="cartModal" class="cart-modal">
     <div class="cart-content">
         <span class="close-btn">&times;</span>
@@ -264,12 +255,10 @@
     </div>
 </div>
 
-<!-- TOMBOL LIHAT KERANJANG -->
+<!-- TOMBOL LIHAT KERANJANG (MOBILE) -->
 <button id="viewCartBtn" class="cart-btn">
     🛒 <span id="cartCount">0</span>
 </button>
 
-    
 </body>
 </html>
-
