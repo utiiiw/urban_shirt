@@ -23,13 +23,11 @@
   <span class="bubble"></span>
 </div> 
 
-<!-- NAVBAR DENGAN IKON KERANJANG -->
+<!-- NAVBAR TANPA IKON KERANJANG -->
 <header class="navbar">
     <div class="logo">Urban Shirt</div>
+
     <nav class="nav-menu">
-        <div id="navCart" class="nav-cart">
-    🛒 <span id="navCartCount">0</span>
-</div>
         <ul>
             <li><a href="#home">Beranda</a></li>
             <li><a href="#katalog">Katalog</a></li>
@@ -38,15 +36,10 @@
             <li><a href="#kontak">Kontak</a></li>
         </ul>
     </nav>
-
-    <!-- IKON KERANJANG BARU -->
-    <button id="navCartBtn" class="cart-icon-btn">
-        🛒 <span id="cartCountNav">0</span>
-    </button>
 </header>
 
 <!-- =======================
-         BERANDA (HOME)
+         BERANDA
 ======================== -->
 <section id="home">
 <header class="hero">
@@ -75,17 +68,10 @@
 
 <section class="description">
     <p>
-        Di Urban Shirt, kami ingin membuat Anda tampil percaya diri dan stylish di
-        setiap kesempatan. Kami menghadirkan koleksi kemeja dengan desain modern,
-        bahan berkualitas, dan kenyamanan maksimal untuk semua pelanggan kami.
+        Di Urban Shirt, kami ingin membuat Anda tampil percaya diri dan stylish.
     </p>
     <p>
-        Spesialisasi kami adalah kemeja kasual hingga formal yang cocok dipakai ke
-        kampus, kantor, atau sekadar hangout santai.
-    </p>
-    <p>
-        Kami percaya bahwa gaya adalah cara Anda mengekspresikan diri. Karena itu,
-        kami menawarkan berbagai pilihan warna, motif, dan potongan kemeja.
+        Kami menghadirkan koleksi kemeja dengan desain modern dan bahan berkualitas.
     </p>
 </section>
 </section>
@@ -98,12 +84,7 @@
     <h1>Katalog Produk</h1>
     <p class="subtitle">Temukan kemeja favoritmu!</p>
 
-    <input 
-        type="text" 
-        id="searchInput" 
-        placeholder="Cari kemeja..." 
-        class="search-bar" 
-    />
+    <input type="text" id="searchInput" placeholder="Cari kemeja..." class="search-bar" />
 
     <div class="product-grid">
 
@@ -111,11 +92,7 @@
             <img src="katalog/kemeja1.jpg" alt="Kemeja 1" />
             <h3>Kemeja Batik</h3>
             <p class="price">Rp100.000</p>
-            <button 
-                class="btn add-to-cart" 
-                data-id="1" 
-                data-name="Kemeja Batik" 
-                data-price="100000">
+            <button class="btn add-to-cart" data-id="1" data-name="Kemeja Batik" data-price="100000">
                 Tambah ke Keranjang
             </button>
         </div>
@@ -124,11 +101,7 @@
             <img src="katalog/kemeja2.jpg" alt="Kemeja 2" />
             <h3>Kemeja Bowling</h3>
             <p class="price">Rp140.000</p>
-            <button 
-                class="btn add-to-cart" 
-                data-id="2" 
-                data-name="Kemeja Bowling" 
-                data-price="140000">
+            <button class="btn add-to-cart" data-id="2" data-name="Kemeja Bowling" data-price="140000">
                 Tambah ke Keranjang
             </button>
         </div>
@@ -137,11 +110,7 @@
             <img src="katalog/kemeja3.jpg" alt="Kemeja 3" />
             <h3>Kemeja Chambray</h3>
             <p class="price">Rp135.000</p>
-            <button 
-                class="btn add-to-cart" 
-                data-id="3" 
-                data-name="Kemeja Chambray" 
-                data-price="135000">
+            <button class="btn add-to-cart" data-id="3" data-name="Kemeja Chambray" data-price="135000">
                 Tambah ke Keranjang
             </button>
         </div>
@@ -155,27 +124,21 @@
 ======================== -->
 <section id="tentang" class="about-page container">
     <h1>Tentang Urban Shirt</h1>
-    <p class="subtitle">Gaya modern untuk setiap hari. Kualitas terbaik untuk semua suasana.</p>
-    
+    <p class="subtitle">Gaya modern untuk setiap hari.</p>
+
     <div class="about-content">
-        <p>
-            Urban Shirt adalah brand yang menghadirkan kemeja kasual dan formal dengan kualitas premium...
-        </p>
-        <p>
-            Setiap kemeja dibuat dengan detail dan standar tinggi agar kamu merasa percaya diri.
-        </p>
+        <p>Urban Shirt adalah brand dengan kualitas premium...</p>
+        <p>Kami membuat kemeja modern yang nyaman dan stylish.</p>
     </div>
-    
+
     <h2 class="about-title">Visi</h2>
-    <p>
-        Menjadi brand fashion terbaik yang menyediakan kemeja berkualitas tinggi.
-    </p>
-    
+    <p>Menjadi brand fashion terbaik.</p>
+
     <h2 class="about-title">Misi</h2>
     <ul class="about-list">
-        <li>Menyediakan kemeja berkualitas dengan harga terjangkau.</li>
-        <li>Menghadirkan desain yang trendi dan nyaman dipakai.</li>
-        <li>Memberikan pengalaman belanja yang mudah dan ramah pelanggan.</li>
+        <li>Kualitas premium</li>
+        <li>Harga terjangkau</li>
+        <li>Desain trendi</li>
     </ul>
 
     <div class="about-image-box">
@@ -189,28 +152,13 @@
 ======================== -->
 <section id="testimoni" class="testi-page container">
     <h1>Testimoni Pelanggan</h1>
-    <p class="subtitle">Apa kata mereka tentang Urban Shirt?</p>
+    <p class="subtitle">Apa kata mereka?</p>
 
     <div class="testi-list">
-        <div class="testi-item">
-            <p class="quote">“Kemejanya nyaman banget...”</p>
-            <h4>- Andi Saputra</h4>
-        </div>
-
-        <div class="testi-item">
-            <p class="quote">“Ukuran pas, warna sesuai foto...”</p>
-            <h4>- Rina Marlina</h4>
-        </div>
-
-        <div class="testi-item">
-            <p class="quote">“Kemeja favorit buat kerja...”</p>
-            <h4>- Bima Akbar</h4>
-        </div>
-
-        <div class="testi-item">
-            <p class="quote">“Modelnya kekinian...”</p>
-            <h4>- Sinta Fadillah</h4>
-        </div>
+        <div class="testi-item"><p class="quote">“Kemejanya nyaman banget…”</p><h4>- Andi</h4></div>
+        <div class="testi-item"><p class="quote">“Ukuran pas…”</p><h4>- Rina</h4></div>
+        <div class="testi-item"><p class="quote">“Kemeja favorit…”</p><h4>- Bima</h4></div>
+        <div class="testi-item"><p class="quote">“Model kekinian…”</p><h4>- Sinta</h4></div>
     </div>
 </section>
 
@@ -220,7 +168,7 @@
 ======================== -->
 <section id="kontak" class="contact-page container">
     <h1>Hubungi Urban Shirt</h1>
-    <p class="subtitle">Kami siap membantu kebutuhanmu!</p>
+    <p class="subtitle">Kami siap membantu!</p>
 
     <div class="contact-wrapper">
         <div class="contact-info">
@@ -228,7 +176,7 @@
             <p><strong>WhatsApp:</strong> 0813-8445-0730</p>
             <p><strong>Email:</strong> urbanshirtstore@gmail.com</p>
             <p><strong>Instagram:</strong> @urban.shirt</p>
-            <p><strong>Alamat:</strong> Tangerang, Banten</p>
+            <p><strong>Alamat:</strong> Tangerang</p>
         </div>
 
         <form class="contact-form">
@@ -258,11 +206,10 @@
     </div>
 </div>
 
-<!-- TOMBOL LIHAT KERANJANG (MOBILE) -->
+<!-- TOMBOL KERANJANG BAWAH (INI YANG UTAMA) -->
 <button id="viewCartBtn" class="cart-btn">
     🛒 <span id="cartCount">0</span>
 </button>
 
 </body>
 </html>
-
