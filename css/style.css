@@ -87,10 +87,20 @@ body {
 
 /* Hamburger */
 .hamburger {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-  color: #7a1b41;
+  display: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #7a1b41; /* Warna senada dengan tema */
+    transition: all 0.3s ease;
 }
 
 /* Mobile Menu */
@@ -447,4 +457,5 @@ body {
 
 .hero-text {
     z-index: 12 !important;
+
 }
