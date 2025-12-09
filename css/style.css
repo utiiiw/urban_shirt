@@ -133,7 +133,14 @@ body {
 
   .nav-menu.active {
     right: 0;
+     display: flex;
   }
+
+   .nav-menu.active ul {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+   }
 
   .nav-menu li a {
     padding: 12px 14px;
@@ -461,3 +468,4 @@ body {
     z-index: 12 !important;
 
 }
+
