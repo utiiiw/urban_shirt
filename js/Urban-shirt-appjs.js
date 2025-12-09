@@ -1,25 +1,6 @@
 // app.js - Urban Shirt Online Store (Final Fixed Version)
 
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // ===================================
-    // 1. MOBILE MENU TOGGLE 🍔
-    // ===================================
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.getElementById('nav-menu');
-
-    if (hamburger && navMenu) {
-        // Definisikan fungsi toggleMenu untuk digunakan oleh event listener
-        const toggleMenu = function() {
-            navMenu.classList.toggle('active');
-        };
-        
-        // Tambahkan event listener untuk tombol hamburger
-        hamburger.addEventListener('click', toggleMenu);
-        
-        // Tetap pertahankan fungsi global jika ada halaman yang memanggilnya via inline (seperti index.html)
-        window.toggleMenu = toggleMenu; 
-    }
 
     // ===================================
     // 2. SEARCH FUNCTIONALITY (Katalog Page) 🔍
@@ -220,3 +201,4 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCartCount();
     }
 });
+
