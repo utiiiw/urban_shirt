@@ -20,9 +20,10 @@ body {
   z-index: 1 !important;
 }
 
-/* ===========================================
-   FIX NAVBAR STRUCTURE (AGAR TIDAK ACAK²)
-=========================================== */
+/* ==================================================
+   NAVBAR FIX - BORDER TETAP, MENU KE KANAN (HORIZONTAL)
+   TIDAK TURUN KE BAWAH DI HP
+================================================== */
 .navbar {
   position: fixed;
   top: 0;
@@ -34,32 +35,28 @@ body {
   justify-content: space-between;
   align-items: center;
   background: #ffffff;
-  border-bottom: 1px solid rgba(122, 27, 65, 0.1);
+  border-bottom: 2px solid #7a1b41; /* BORDER BIAR KAYA AWAL */
   z-index: 9999;
 }
 
 .navbar nav ul {
   display: flex;
   list-style: none;
-  gap: 12px;
+  gap: 10px;
 }
 
+/* menu dengan border kotak */
 .navbar nav ul li a {
   display: block;
-  text-decoration: none;
-  padding: 8px 15px;
+  padding: 6px 14px;
   border-radius: 10px;
   border: 2px solid #7a1b41;
+  background: white;
   color: #7a1b41;
+  text-decoration: none;
   font-weight: 600;
-  background: #ffffff;
-  transition: 0.25s ease;
 }
 
-.navbar nav ul li a:hover {
-  background: #7a1b41;
-  color: white;
-}
 
 /* ===========================================
    FIX HERO — AGAR TIDAK TURUN / KE SERET
@@ -91,31 +88,24 @@ body {
   text-shadow: 0 0 10px rgba(255,255,255,1);
 }
 
-/* ===========================================
-   MOBILE FIX — NAVBAR TIDAK BERALIH LIAR
-=========================================== */
+/* ========= MOBILE FIX: menu tetap horizontal ========= */
 @media (max-width: 768px) {
+
   .navbar {
-    height: auto;
-    flex-direction: column;
-    padding-bottom: 10px;
+    flex-direction: row;
+    height: 70px;
+    padding: 12px 16px;
   }
 
   .navbar nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    padding-top: 10px;
+    flex-wrap: nowrap;   /* ⬅ memastikan tidak turun */
+    overflow-x: auto;    /* ⬅ scroll horizontal kalau kepanjangan */
+    -webkit-overflow-scrolling: touch;
   }
 
-  .hero {
-    height: 60vh;
-    margin-top: 120px; /* navbar lebih tinggi di mobile */
-  }
-
-  .hero-text {
-    font-size: 24px;
-  }
+  .navbar nav ul li a {
+    white-space: nowrap;  /* ⬅ biar tidak pecah jadi 2 baris */
+  }
 }
 
 /* ========================================================
@@ -225,3 +215,38 @@ body {
   background: #5a1330;
 }
 
+/* ===================================================
+   PERBAIKAN KATALOG HP (SUPAYA FULL WIDTH)
+=================================================== */
+@media (max-width: 768px) {
+
+  /* container utama katalog */
+  .produk-container,
+  .katalog-container,
+  .product-grid {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* card produk */
+  .product-card {
+    width: 100% !important;
+    margin: 15px 0 !important;
+    padding: 10px !important;
+    box-sizing: border-box;
+  }
+
+  /* gambar produk */
+  .product-card img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+  }
+
+  /* text biar ga kepotong */
+  .product-card h3,
+  .product-card p {
+    text-align: center;
+  }
+}
